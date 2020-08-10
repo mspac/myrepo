@@ -189,27 +189,11 @@ fun(one,two)
 print(one)   # 10
 print(two)  #update inside function that new values will refelect
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+a =10
+def fun():
+    a=2
+    print(a)
+    # global a  # we use to update /change the gloable variable inside function  -> but we can't use when local variable also same name
+    # a = 300
+    print(globals()['a'])  #to use gloable
+fun()
