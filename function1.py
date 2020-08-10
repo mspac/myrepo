@@ -184,7 +184,7 @@ def fun(one,two):   #local variable we can only access inside function
 
 
 # fun('hello','work')
-print(one,two)  #first execute this (10,[1,2,3,4]
+print(one,two)  #first execute this (10,[1,2,3,4] 
 fun(one,two)
 print(one)   # 10
 print(two)  #update inside function that new values will refelect
