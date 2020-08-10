@@ -13,6 +13,6 @@ a=20
 def m2():
     a=10
     print(a)
-    print(globals()['a'])  #to use gloable variable (when locla variable also with same)
+    print(globals()['a'])  #to use gloable variable (when locla variable also with same name)
 m2()
 print(a)
