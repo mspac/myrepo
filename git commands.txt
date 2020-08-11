@@ -1,0 +1,85 @@
+Q)How to work with git?
+
+i)mkdir <directory name>
+ii)cd <directory name>
+iii)cd           -> come outside one level direcotry 
+
+ls            -> display the list of files in curent directory and folder names(but not display anything inside sub-directory)
+ls -l         -> display the list of files in curent directory and folder names(but not display anything inisde sub-directory)
+ls -la        -> display the list of files & sub-directory name(don't show  sub-directory files ) & hidden files list also.
+
+git init --> it will initiaize git and create empty structure under .git folder 
+	  Note: now default branch will create with name(master)
+
+3 phases in git 
+--------------
+
+	1) working_dir 
+	2)stage/cache
+	3)locl_repo
+
+Q)configure your git to work correctly?
+
+3 types of configuration:
+ 1)sytem
+	/etc/gitconfig
+	    git config   --system
+ 2)user
+    ~/.gitconfig (or) /home/ramu.gitconfig
+	git config   --global
+ 2)project 
+	.git/config
+		git config
+
+user level configration
+-----------------------
+
+git config  --global user.name   "username"              ->mspac
+git config  --global user.email  'email@gmail.com'       ->work.mspace@gmail.com
+git config  --global core.editor 'vim'
+git config  --global color.ui true
+
+
+4)git config --list                    ->to display the list of configration list (like username,email confiuration like)
+  git config --global -e               ->to open the username,email configuration file (we can edit the name/email )
+
+5) touch   <anyfilename.format>        ->to create the empty file(word/txt)
+   touch   <file1> <file2>
+
+6) git add <filename>
+   git add <filename1> <filename2>
+   git add ./*/-A                      -> to add all working directory  to stageing area
+
+7) git status                          -> to know where files are there working directory or staging area.
+
+8) git commit -m "label"               -> which files are there in a staging area those files will be commit all at time(all files from staging area to local repository)
+   git commit -m 'label' <fileName>    -> spacefic files to commit
+
+9) git log                               -> list of commit id will display
+   git log -n(n means numberlogslike 2)  -> To dispaly latest 2 commit ids
+   git log --online                      -> to display short id(first 7 numbers from a ID)
+   git log --online -n                   -> how many log id wants to display? we can mention
+   git log --author=<username>           -> so display log id commited by this(spacific) user (and also if clone the someone merged project from GITHUM)
+   git log --author=<username>  --oneline
+   git log --author=<usrname>   --oneline -n
+   git log --since=yyyy-mm-dd                 -> from this Date(ex:2020-08-01) to Untill now (you want to get log ids )
+   git log --until=yyyy-mm-dd                 -> from stat to Untill this date(ex:2020-07-31) (you want to get log ids)
+   git show <commit id>                       ->list of files are there in a purticular commit id( that information will show.)
+   git log --oneline --decorate               -> it will show the all commit id of all Branches 
+   git log --oneline --decorate -n            ->
+   git log --oneline --decorate --graph
+   git log --oneline --decorate --graph -n
+
+
+
+10) git reset --soft  <comit id>       ->should take 2nd id not (Head ->master id)  -> from Local Repository to Statging Area     (   3 to 2)
+    git reset --mixed <comit id>       ->should take 2nd id not (Head ->master id)  -> from Local Repositroy to WorkingRepository (direct 3 to 1)
+    git reset  head  <file Name>        ->                                               -> Stageing Area to WorkingRepository     (   2 to 1)
+
+
+-----------------------------------------------------------
+
+11) git clone <url-repoof centeral repository>             -> ex: githup link (we are copy by using clone command)
+    git clone <url-repoof centeral repository> <userdefined name for branch>   ->while copin the branch we are changing the branc name.
+
+   
